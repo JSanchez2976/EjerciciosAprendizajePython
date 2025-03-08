@@ -47,3 +47,13 @@ for nombre,detalles in agenda.items():
     Email: {detalles.get("email")}
     Direccion: {detalles.get("direccion")}
 """)
+
+# Mostrar un unico contacto
+print("\nBuscar informacion de contacto")
+contacto = input("Contacto a buscar informacion: ").capitalize()
+if contacto in agenda:
+    print(f"\nContacto {contacto}: ")
+    for llaves, valor in agenda[contacto].items():
+        print(f"""Llave: {llaves}, valor: {valor}  """)
+else:
+    print("Ese contacto no existe")
